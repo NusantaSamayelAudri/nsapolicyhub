@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Policy Analyst | Personal Website</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#1f3a5f;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.profile{
+    text-align:center;
+    margin-top:-40px;
+}
+
+.profile img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:5px solid white;
+}
+
+.container{
+    max-width:900px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.tabs{
+    display:flex;
+    border-bottom:2px solid #ddd;
+}
+
+.tab-button{
+    padding:12px 20px;
+    cursor:pointer;
+    border:none;
+    background:none;
+    font-size:16px;
+}
+
+.tab-button:hover{
+    background:#f0f0f0;
+}
+
+.tab-button.active{
+    border-bottom:3px solid #1f3a5f;
+    font-weight:bold;
+}
+
+.tab-content{
+    display:none;
+    padding:20px 0;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Your Name</h1>
+<p>Policy Analyst | Governance | Social Policy</p>
+</header>
+
+<div class="profile">
+<img src="profile.jpg" alt="Profile Photo">
+</div>
+
+<div class="container">
+
+<p style="text-align:center;">
+I am a policy analyst working on governance, social policy, and public administration.
+My work focuses on policy design, program evaluation, and evidence-based decision making.
+</p>
+
+<div class="tabs">
+<button class="tab-button active" onclick="openTab(event,'about')">About</button>
+<button class="tab-button" onclick="openTab(event,'research')">Research</button>
+<button class="tab-button" onclick="openTab(event,'writing')">Policy Writing</button>
+<button class="tab-button" onclick="openTab(event,'contact')">Contact</button>
+</div>
+
+<div id="about" class="tab-content active">
+<h3>About</h3>
+<p>
+I specialize in public policy analysis, program evaluation, and governance research.
+My work focuses on administrative systems, public institutions, and policy implementation.
+</p>
+</div>
+
+<div id="research" class="tab-content">
+<h3>Research</h3>
+<ul>
+<li>Administrative burden and institutional exclusion</li>
+<li>Social protection and climate vulnerability</li>
+<li>Public service delivery and governance</li>
+</ul>
+</div>
+
+<div id="writing" class="tab-content">
+<h3>Policy Writing</h3>
+<ul>
+<li>Policy briefs on governance and diplomacy</li>
+<li>Research reports on social policy</li>
+<li>Public commentary on policy reforms</li>
+</ul>
+</div>
+
+<div id="contact" class="tab-content">
+<h3>Contact</h3>
+<p>Email: your.email@example.com</p>
+<p>LinkedIn: linkedin.com/in/yourname</p>
+<p>Twitter/X: @yourhandle</p>
+</div>
+
+</div>
+
+<footer>
+© 2026 Your Name
+</footer>
+
+<script>
+function openTab(evt, tabName) {
+
+var i, tabcontent, tabbuttons;
+
+tabcontent = document.getElementsByClassName("tab-content");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].classList.remove("active");
+}
+
+tabbuttons = document.getElementsByClassName("tab-button");
+for (i = 0; i < tabbuttons.length; i++) {
+tabbuttons[i].classList.remove("active");
+}
+
+document.getElementById(tabName).classList.add("active");
+evt.currentTarget.classList.add("active");
+
+}
+</script>
+
+</body>
+</html>
