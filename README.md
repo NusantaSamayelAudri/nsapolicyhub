@@ -106,9 +106,6 @@ Current and planned features include:
 ```text
 .
 ├── index.html
-├── data.json
 ├── style.css
-├── script.js
-├── assets/
-│   └── images/
-└── README.md
+├── README.md
+└── LICENSE
