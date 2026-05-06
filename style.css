@@ -1,83 +1,95 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #1f2937;
-  background: #f8fafc;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
-.site-header {
-  background: #0f172a;
-  padding: 1rem 2rem;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.logo {
-  color: white;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.nav-links a {
-  color: #e5e7eb;
-  text-decoration: none;
-  margin-left: 1rem;
-  font-size: 0.95rem;
-}
-
-.nav-links a:hover {
-  color: #93c5fd;
-}
-
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.hero {
-  background: white;
-  padding: 3rem;
-  border-radius: 16px;
-  margin: 2rem 0;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin: 0.5rem 0;
-  color: #0f172a;
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #2563eb;
-  letter-spacing: 0.08em;
-}
-
-section {
-  background: white;
-  padding: 2rem;
-  margin: 1.5rem 0;
+.card,
+.project-card,
+.writing-item {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 14px;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+  padding: 1.5rem;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
 }
 
-section h2 {
+.project-card,
+.writing-item {
+  margin-top: 1.25rem;
+}
+
+.card h3,
+.project-card h3,
+.writing-item h3 {
+  margin-top: 0;
   color: #0f172a;
 }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  color: #64748b;
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.tag-row span {
+  background: #e0f2fe;
+  color: #075985;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.text-link {
+  color: #2563eb;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-right: 0.75rem;
+}
+
+.button.secondary {
+  background: #e5e7eb;
+  color: #0f172a;
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    margin: 0 0.75rem 0.5rem 0;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+  }
 }
